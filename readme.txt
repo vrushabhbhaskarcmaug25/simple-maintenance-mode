@@ -1,4 +1,4 @@
-=== Simple Maintenance Mode ===
+=== Bhaskar Maintenance Mode ===
 Contributors: vrushabhbhaskar
 Plugin URI: https://cheekybhaskar.wordpress.com/my-plugins/
 Tags: maintenance, maintenance mode, 503
@@ -13,7 +13,7 @@ A lightweight WordPress maintenance mode plugin.
 
 == Description ==
 
-Simple Maintenance Mode allows administrators to temporarily hide the public website while continuing to access the normal website and WordPress dashboard.
+Bhaskar Maintenance Mode allows administrators to temporarily hide the public website while continuing to access the normal website and WordPress dashboard.
 
 Visitors receive a proper HTTP 503 response while maintenance mode is active.
 

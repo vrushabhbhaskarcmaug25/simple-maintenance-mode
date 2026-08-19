@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Simple Maintenance Mode
+ * Plugin Name: Bhaskar Maintenance Mode
  * Plugin URI: https://cheekybhaskar.wordpress.com/my-plugins/
  * Description: A lightweight maintenance mode plugin that lets administrators keep access to the website while showing visitors a temporary maintenance page.
  * Version: 1.0.0
