@@ -121,6 +121,7 @@ class SMM_Maintenance {
 		/**
 		 * Render the maintenance page.
 		 */
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- SMM_Renderer::render() returns a complete HTML document with dynamic values escaped at their output points.
 		echo SMM_Renderer::render();
 
 		exit;

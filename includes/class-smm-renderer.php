@@ -282,7 +282,7 @@ class SMM_Renderer {
 
 
 					<p class="smm-message">
-						<?php echo $message; ?>
+						<?php echo esc_html( $message ); ?>
 					</p>
 
 
