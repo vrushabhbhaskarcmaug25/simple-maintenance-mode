@@ -1,7 +1,7 @@
 === Simple Maintenance Mode ===
 Contributors: vrushabhbhaskar
 Plugin URI: https://cheekybhaskar.wordpress.com/my-plugins/
-Tags: maintenance, maintenance mode, 503, coming soon
+Tags: maintenance, maintenance mode, 503
 Requires at least: 5.8
 Requires PHP: 7.4
 Stable tag: 1.0.0
