@@ -9,11 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class SMM_Settings {
 
+
 	/**
 	 * Initialize settings.
 	 *
 	 * @return void
 	 */
+
 	public static function init() {
 
 		add_action(
@@ -29,6 +31,11 @@ class SMM_Settings {
 		add_action(
 			'admin_notices',
 			array( __CLASS__, 'maintenance_notice' )
+		);
+
+		add_action(
+			'admin_notices',
+			array( __CLASS__, 'activation_notice' )
 		);
 
 	}
@@ -111,12 +118,12 @@ class SMM_Settings {
 	 */
 	public static function sanitize_message( $value ) {
 
-if ( ! is_string( $value ) ) {
-		return __(
-			'We are performing some improvements and will be back shortly.',
-			'simple-maintenance-mode'
-		);
-	}
+		if ( ! is_string( $value ) ) {
+			return __(
+				'We are performing some improvements and will be back shortly.',
+				'simple-maintenance-mode'
+			);
+		}
 
 		$value = sanitize_textarea_field( $value );
 
@@ -372,6 +379,75 @@ if ( ! is_string( $value ) ) {
 
 		<?php
 
+	}
+
+       /**
+	* Display a one-time notice after plugin activation.
+ 	*
+ 	* @return void
+ 	*/
+	public static function activation_notice() {
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		if ( ! get_option( 'smm_activation_notice', false ) ) {
+			return;
+		}
+
+		if ( ! function_exists( 'get_current_screen' ) ) {
+			return;
+		}
+
+		$screen = get_current_screen();
+
+		if ( ! $screen || 'plugins' !== $screen->id ) {
+			return;
+		}
+
+		delete_option( 'smm_activation_notice' );
+	
+		$settings_url = admin_url(
+			'options-general.php?page=simple-maintenance-mode'
+		);
+
+		?>
+
+		<div class="notice notice-success is-dismissible">
+
+			<p>
+
+				<strong>
+					<?php
+					esc_html_e(
+						'Simple Maintenance Mode is ready.',
+						'simple-maintenance-mode'
+					);
+					?>
+				</strong>
+
+				<?php
+				esc_html_e(
+					'Configure the plugin from Settings → Maintenance Mode.',
+					'simple-maintenance-mode'
+				);
+				?>
+
+				<a href="<?php echo esc_url( $settings_url ); ?>">
+					<?php
+					esc_html_e(
+						'Go to Settings',
+						'simple-maintenance-mode'
+					);
+					?>
+				</a>
+
+			</p>
+
+		</div>
+
+		<?php
 	}
 
 

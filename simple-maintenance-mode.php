@@ -42,6 +42,26 @@ define( 'SMM_OPTION_MESSAGE', 'smm_message' );
 
 
 /**
+ * Set the activation notice flag.
+ *
+ * @return void
+ */
+function smm_activate() {
+
+	add_option(
+		'smm_activation_notice',
+		1
+	);
+
+}
+
+register_activation_hook(
+	__FILE__,
+	'smm_activate'
+);
+
+
+/**
  * Load plugin classes.
  */
 require_once SMM_PLUGIN_DIR . 'includes/class-smm-maintenance.php';
