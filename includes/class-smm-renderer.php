@@ -52,7 +52,7 @@ class SMM_Renderer {
 				echo esc_html(
 					sprintf(
 						/* translators: %s: site name */
-						__( 'Maintenance — %s', 'simple-maintenance-mode' ),
+						__( 'Maintenance — %s', 'bhaskar-maintenance-mode' ),
 						$site_name
 					)
 				);
@@ -275,7 +275,7 @@ class SMM_Renderer {
 						<?php
 						esc_html_e(
 							'We’ll be back shortly',
-							'simple-maintenance-mode'
+							'bhaskar-maintenance-mode'
 						);
 						?>
 					</h1>
@@ -290,7 +290,7 @@ class SMM_Renderer {
 						<?php
 						esc_html_e(
 							'Thank you for your patience.',
-							'simple-maintenance-mode'
+							'bhaskar-maintenance-mode'
 						);
 						?>
 					</p>

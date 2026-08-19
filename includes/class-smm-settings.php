@@ -49,8 +49,8 @@ class SMM_Settings {
 	public static function register_menu() {
 
 		add_options_page(
-			__( 'Maintenance Mode', 'simple-maintenance-mode' ),
-			__( 'Maintenance Mode', 'simple-maintenance-mode' ),
+			__( 'Maintenance Mode', 'bhaskar-maintenance-mode' ),
+			__( 'Maintenance Mode', 'bhaskar-maintenance-mode' ),
 			'manage_options',
 			'simple-maintenance-mode',
 			array( __CLASS__, 'render_page' )
@@ -121,7 +121,7 @@ class SMM_Settings {
 		if ( ! is_string( $value ) ) {
 			return __(
 				'We are performing some improvements and will be back shortly.',
-				'simple-maintenance-mode'
+				'bhaskar-maintenance-mode'
 			);
 		}
 
@@ -131,7 +131,7 @@ class SMM_Settings {
 
 			return __(
 				'We are performing some improvements and will be back shortly.',
-				'simple-maintenance-mode'
+				'bhaskar-maintenance-mode'
 			);
 
 		}
@@ -161,7 +161,7 @@ class SMM_Settings {
 			SMM_OPTION_MESSAGE,
 			__(
 				'We are performing some improvements and will be back shortly.',
-				'simple-maintenance-mode'
+				'bhaskar-maintenance-mode'
 			)
 		);
 
@@ -173,7 +173,7 @@ class SMM_Settings {
 				<?php
 				esc_html_e(
 					'Maintenance Mode',
-					'simple-maintenance-mode'
+					'bhaskar-maintenance-mode'
 				);
 				?>
 			</h1>
@@ -186,7 +186,7 @@ class SMM_Settings {
 						<?php
 						esc_html_e(
 							'Current status:',
-							'simple-maintenance-mode'
+							'bhaskar-maintenance-mode'
 						);
 						?>
 					</strong>
@@ -197,7 +197,7 @@ class SMM_Settings {
 							<?php
 							esc_html_e(
 								'ON',
-								'simple-maintenance-mode'
+								'bhaskar-maintenance-mode'
 							);
 							?>
 						</span>
@@ -208,7 +208,7 @@ class SMM_Settings {
 							<?php
 							esc_html_e(
 								'OFF',
-								'simple-maintenance-mode'
+								'bhaskar-maintenance-mode'
 							);
 							?>
 						</span>
@@ -223,7 +223,7 @@ class SMM_Settings {
 						<?php
 						esc_html_e(
 							'Visitors are currently seeing the maintenance page. Administrators can still view the normal site.',
-							'simple-maintenance-mode'
+							'bhaskar-maintenance-mode'
 						);
 						?>
 					</p>
@@ -234,7 +234,7 @@ class SMM_Settings {
 						<?php
 						esc_html_e(
 							'Your website is currently available to visitors.',
-							'simple-maintenance-mode'
+							'bhaskar-maintenance-mode'
 						);
 						?>
 					</p>
@@ -266,7 +266,7 @@ class SMM_Settings {
 							<?php
 							esc_html_e(
 								'Maintenance mode',
-								'simple-maintenance-mode'
+								'bhaskar-maintenance-mode'
 							);
 							?>
 
@@ -286,7 +286,7 @@ class SMM_Settings {
 								<?php
 								esc_html_e(
 									'Enable maintenance mode',
-									'simple-maintenance-mode'
+									'bhaskar-maintenance-mode'
 								);
 								?>
 
@@ -297,7 +297,7 @@ class SMM_Settings {
 								<?php
 								esc_html_e(
 									'When enabled, visitors will see the maintenance page. Administrators can continue viewing the normal website.',
-									'simple-maintenance-mode'
+									'bhaskar-maintenance-mode'
 								);
 								?>
 
@@ -317,7 +317,7 @@ class SMM_Settings {
 								<?php
 								esc_html_e(
 									'Visitor message',
-									'simple-maintenance-mode'
+									'bhaskar-maintenance-mode'
 								);
 								?>
 
@@ -340,7 +340,7 @@ class SMM_Settings {
 								<?php
 								esc_html_e(
 									'This message is displayed to visitors while maintenance mode is active.',
-									'simple-maintenance-mode'
+									'bhaskar-maintenance-mode'
 								);
 								?>
 
@@ -367,7 +367,7 @@ class SMM_Settings {
 					<?php
 					esc_html_e(
 						'You can view the normal website because you have administrator access.',
-						'simple-maintenance-mode'
+						'bhaskar-maintenance-mode'
 					);
 					?>
 
@@ -422,7 +422,7 @@ class SMM_Settings {
 					<?php
 					esc_html_e(
 						'Simple Maintenance Mode is ready.',
-						'simple-maintenance-mode'
+						'bhaskar-maintenance-mode'
 					);
 					?>
 				</strong>
@@ -430,7 +430,7 @@ class SMM_Settings {
 				<?php
 				esc_html_e(
 					'Configure the plugin from Settings → Maintenance Mode.',
-					'simple-maintenance-mode'
+					'bhaskar-maintenance-mode'
 				);
 				?>
 
@@ -438,7 +438,7 @@ class SMM_Settings {
 					<?php
 					esc_html_e(
 						'Go to Settings',
-						'simple-maintenance-mode'
+						'bhaskar-maintenance-mode'
 					);
 					?>
 				</a>
@@ -477,7 +477,7 @@ class SMM_Settings {
 					<?php
 					esc_html_e(
 						'Maintenance Mode is active.',
-						'simple-maintenance-mode'
+						'bhaskar-maintenance-mode'
 					);
 					?>
 				</strong>
@@ -485,7 +485,7 @@ class SMM_Settings {
 				<?php
 				esc_html_e(
 					'Visitors are currently seeing the maintenance page. Administrators can still view the normal website.',
-					'simple-maintenance-mode'
+					'bhaskar-maintenance-mode'
 				);
 				?>
 
